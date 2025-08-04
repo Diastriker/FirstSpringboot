@@ -1,0 +1,11 @@
+package com.example.loose;
+
+public class CoffeeMaker {
+	private CoffeMachine  coffeeMachine;
+	
+	public CoffeeMaker(CoffeMachine coffeeMachine) {
+		this.coffeeMachine = coffeeMachine;
+	}
+	
+	
+}

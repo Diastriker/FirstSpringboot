@@ -1,0 +1,28 @@
+package com.example.loose;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+
+@Component
+public class CoffeeMaker {
+	/*
+	@Qualifier("dripCoffeeMachine") 
+	// (옛날 문법)같은 type의 component가 2개 있으면 이름으로 구분하는 기능,  현재는 @Primary 로 처리
+	 */
+	
+	 //인터페이스 타입
+	
+	@Autowired // 자동으로 의존성 주입 // type으로 체크(1개만 가능)
+	/* 
+	public void setCoffeeMachine(CoffeeMachine coffeeMachine) {
+		this.coffeeMachine = coffeeMachine;
+	} // 이걸 @Autowired 로 대체
+	*/
+	
+	@PostConstruct
+	public void makeCoffee() {
+		System.out.println( coffeeMachine.brew());
+	}
+}

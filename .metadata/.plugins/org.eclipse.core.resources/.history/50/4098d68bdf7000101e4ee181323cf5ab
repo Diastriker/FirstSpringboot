@@ -1,0 +1,15 @@
+package com.example.tight;
+
+// tight Coupling
+public class CoffeMaker {
+//	private EspressoMachine espressoMachine;
+	private CoffeeMachine machine;
+	public CoffeMaker(CoffeeMachine machine) {
+//		this.espressoMachine = new EspressoMachine();
+		this.dripCoffeeMachine = new DripCoffeMachine();
+	}
+	public void makeCoffe () {
+//		System.out.println(espressoMachine.brew());
+		System.out.println(dripCoffeeMachine.brew());
+	}
+}

@@ -1,0 +1,13 @@
+package com.example.loose;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+ @Primary // type 이 같은 두 Component 에 우선순위를 제공
+		  // (dripCoffeeMachine) 이 선택되게 한다 @Qulifier(0 역할
+public class DripCoffeeMachine implements CoffeeMachine {
+	public String brew() {
+		return "드립머신으로 커피를 추출한다";
+	}
+}

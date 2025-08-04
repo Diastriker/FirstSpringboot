@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi=ˮhttp://www.w3.org/2001/XMLSchema-instance "
+xsi:schemaLocation=ˮhttp://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="dripCoffeeMachineˮ class="com.example.demo.DripCoffeeMachineˮ />
+ <bean id="espressoMachine"  class="com.example.demo.EspressoMachineˮ />
+ <bean id="coffeeMaker" class="com.example.demo.CoffeeMaker" init-method="makeCoffee">
+ 9📘스프링 부트 이해하기 DI,IOC,AOP
+<property name= "coffeeMachine" ref=ˮespressoMachineˮ/> 
+</bean> 
+</beans>
